@@ -1,0 +1,12 @@
+  {
+    "name": "assignment solution-shell-automation",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "sudo mkdir -p /etc/log_analyzer && echo 'ERROR_PATTERN=ERROR' | sudo tee /etc/log_analyzer/patterns.conf > /dev/null && echo 'WARNING_PATTERN=WARNING' | sudo tee -a /etc/log_analyzer/patterns.conf > /dev/null",
+
+  }
